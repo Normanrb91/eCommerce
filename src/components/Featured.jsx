@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { startAddCart } from '../actions/actions';
-import image from "../assets/dog-art.png";
+
 
 export const Featured = () => {
 
@@ -9,12 +9,12 @@ export const Featured = () => {
     const {products} = useSelector(state => state.reducer)
     const featuredProduct = products.filter((item) => item.featured === true)
     const product = featuredProduct[0]
-
-    if (!product) return null
-
+    
     const addCart = () => {
         dispatch(startAddCart(product))
     }
+
+    if (!product) return
 
     return (
         <div>
@@ -28,7 +28,7 @@ export const Featured = () => {
             </div>
             <div className="featured-container-image">
                 <img
-                    src={image}
+                    src={product.image.src}
                     alt={product.image.alt}
                 />
                 <div className="featured-footer-image">
@@ -37,7 +37,7 @@ export const Featured = () => {
             </div>
 
 
-            <div className='flex '>
+            {/* <div className='flex '>
 
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2">
                 <h3 className="text-xl font-semibold text-black sm:text-3xl">
@@ -80,7 +80,7 @@ export const Featured = () => {
             </div>
 
 
-            </div>
+            </div> */}
 
         </div>
       

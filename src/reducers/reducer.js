@@ -2,7 +2,6 @@ export const initialState = {
 	products: [],
 	pagination: 1,
 	filterCategoryOption: [],
-	filterPriceOption: [],
 	productCart: [],
     cartVisible: false,
 }

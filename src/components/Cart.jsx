@@ -20,6 +20,14 @@ export const Cart = () => {
     return (
         <div className="cart-container">
             <div onClick={closeCart} className="cart-btn-close"></div>
+
+            {
+                productCart.length === 0 &&
+                <div>
+                    <p>no product selected</p>
+                </div>
+            }
+
             <div className="clear-fix"></div>
                 {productCart.map((item, idx) => (
                     <CartItem key={idx} data={item} />
