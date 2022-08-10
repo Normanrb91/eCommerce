@@ -1,0 +1,21 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: aqua;
+    justify-items: center;
+}
+
+@media (max-width: 1400px) {
+    .list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: aqua;
+    }
+  }
+  @media (max-width: 800px) {
+    .list {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      background-color: aqua;
+    }
+  }

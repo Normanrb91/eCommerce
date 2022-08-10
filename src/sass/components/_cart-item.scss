@@ -1,0 +1,33 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+	border-bottom: 1px solid $border-color;
+	margin-bottom: 15px;
+
+    &__info {
+        flex: 2;
+
+        &__name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        &__price {
+            font-size: 20px;
+            margin-top: 10px;
+            color: $price-color;
+        }
+    }
+
+    &__image {
+        flex: 1;
+        
+        img {
+            width: 100%;
+            min-height: 70px;
+            padding-left: 10px;
+            object-fit: fill;
+        }
+    }
+}

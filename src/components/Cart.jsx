@@ -1,7 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { CartItem } from './CartItem'
-import '../styles/Header.css'
 import { startClearCart, startCloseCart } from '../actions/actions'
 
 export const Cart = () => {
@@ -18,9 +17,9 @@ export const Cart = () => {
     }
 
     return (
-        <div className="cart-container">
-            <div onClick={closeCart} className="cart-btn-close"></div>
-
+        <div className="cart">
+            <div onClick={closeCart} className="cart__btn__close"></div>
+            <div className="clr-fix"></div>
             {
                 productCart.length === 0 &&
                 <div>
@@ -33,8 +32,8 @@ export const Cart = () => {
                     <CartItem key={idx} data={item} />
                 ))}
 
-            <button onClick={clearCart} className="cart-btn-clear">
-                CLEAR
+            <button onClick={clearCart} className="cart__btn__clear">
+                clear
             </button>
         </div>
     )

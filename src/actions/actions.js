@@ -10,8 +10,10 @@ export const startCloseCart = () => ({type: actionTypes.CLOSE_CART})
 
 export const startOpenCart = () => ({type: actionTypes.OPEN_CART})
 
-export const startGetProduct = (currentpage = 1, body = { }) => {
-    return async (dispatch) => {
+export const startGetProduct = (body = {}) => {
+    return async (dispatch, getState) => {
+
+        const { currentpage } = getState().reducer;
 
         try {
             const resp = await productFetchApi(`products?page=${currentpage}`, 'POST', 'application/json', body)

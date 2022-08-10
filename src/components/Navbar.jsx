@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Cart } from './Cart'
 import logo from '../assets/logo.svg'
 import cart from '../assets/cart.svg'
-import '../styles/Header.css'
 import { startCloseCart, startOpenCart } from '../actions/actions'
 
 
@@ -18,20 +17,20 @@ export const Navbar = () => {
     }
 
     return (
-        <div className="nav-container">
+        <div className="navbar">
 
-            <img height={20} width={124} src={logo} alt="logo"/>
+            <img className="navbar__img" src={logo} alt="logo"/>
       
-            <div className="nav-container-cart">
+            <div className="navbar__cart__container">
                
                { productCart.length > 0 &&
-                <span className="nav-cart-quantity" onClick={toggleCart}>
+                <span className="navbar__quantity" onClick={toggleCart}>
                     {productCart.length}
                 </span>
                }
 
-                <div className="nav-cart-icon" onClick={toggleCart} >
-                    <img width={52} height={38} src={cart} alt="cart"/>
+                <div className="navbar__icon" onClick={toggleCart} >
+                    <img src={cart} alt="cart"/>
                 </div>
             
             { cartVisible && <Cart /> }

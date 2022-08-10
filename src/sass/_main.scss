@@ -10,3 +10,24 @@
     padding: 20px 75px;
     margin: auto;
 }
+
+.clr-fix {
+	clear: both;
+}
+
+
+.text-black {
+    color: #000;
+
+}
+
+.text-gray {
+    color: #000;
+    opacity: 0.5;
+}
+
+.product-list{
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+}
